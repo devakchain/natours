@@ -1,0 +1,57 @@
+.header {
+  position: relative;
+  height: 95vh;
+  background-image: linear-gradient(
+      to right,
+      rgba($color-light, 0.8),
+      rgba($color-dark, 0.8)
+    ),
+    url("../img/hero.jpg");
+  background-size: cover;
+  background-position: center;
+
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+
+  &__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem;
+
+    @include respond(phone) {
+      top: 2rem;
+      left: 2rem;
+    }
+  }
+
+  &__logo {
+    height: 3.5rem;
+
+    @include respond(phone) {
+      height: 3rem;
+    }
+  }
+
+  &__text-box {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 0 2rem;
+
+    @include respond(phone) {
+      top: 50%;
+      padding: 0 1rem;
+    }
+  }
+
+  // שינוי קליפ למסכים קטנים (אם יש בעיה עם הצורה)
+  @include respond(phone) {
+    clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+  }
+
+  @include respond(tab-port) {
+    clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
+  }
+}

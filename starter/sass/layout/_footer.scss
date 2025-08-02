@@ -1,0 +1,90 @@
+.footer {
+  background-color: #1f1f1f;
+  padding: 10rem 0;
+  font-size: 1.4rem;
+  color: whitesmoke;
+
+  &__logo-box {
+    text-align: center;
+    margin-bottom: 8rem;
+
+    @include respond(phone) {
+      margin-bottom: 5rem;
+    }
+  }
+
+  &__logo {
+    width: 15rem;
+    height: auto;
+  }
+
+  &__navigation {
+    float: left;
+    width: 50%;
+    border-top: 0.1rem solid gray;
+    padding-top: 2rem;
+
+    @include respond(tab-port) {
+      float: none;
+      width: 100%;
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    @include respond(phone) {
+      padding-top: 1.5rem;
+    }
+  }
+
+  &__list {
+    list-style: none;
+  }
+
+  &__item {
+    display: inline-block;
+
+    &:not(:last-child) {
+      margin-right: 1.5rem;
+    }
+
+    @include respond(phone) {
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      color: whitesmoke;
+      text-decoration: none;
+      display: inline-block;
+      transition: all 0.2s;
+    }
+
+    &:hover,
+    &:active {
+      color: $color-dark;
+      box-shadow: 0 1rem 2rem rgba($color-dark, 0.4);
+      transform: scale(1.1);
+    }
+  }
+
+  &__copyright {
+    float: right;
+    width: 50%;
+    text-align: right;
+    border-top: 0.1rem solid gray;
+    padding-top: 2rem;
+    font-size: 1.2rem;
+
+    @include respond(tab-port) {
+      float: none;
+      width: 100%;
+      text-align: center;
+    }
+
+    @include respond(phone) {
+      padding-top: 1.5rem;
+    }
+  }
+}
