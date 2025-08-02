@@ -3,17 +3,17 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "sass": "sass sass/main.scss css/style.css --watch"
+    "build:css": "sass sass/main.scss css/style.css"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
-    "nodemon": "^3.1.10",
     "sass": "^1.89.2"
   },
   "dependencies": {
-    "live-server": "^1.2.2"
+    "live-server": "^1.2.2",
+    "nodemon": "^3.1.10"
   }
 }
